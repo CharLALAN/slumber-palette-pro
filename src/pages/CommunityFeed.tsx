@@ -110,9 +110,19 @@ export default function CommunityFeed() {
       className="max-w-xl mx-auto px-4 py-8"
     >
       {/* Header */}
-      <div className="mb-8">
+      <div className="mb-6">
         <h1 className="text-3xl font-bold tracking-tight mb-1">Community</h1>
         <p className="text-muted-foreground text-sm">Share and explore dream experiences</p>
+      </div>
+
+      {/* Search */}
+      <div className="relative mb-6">
+        <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+        <input
+          type="text"
+          placeholder="Search dreams..."
+          className="w-full pl-11 pr-4 py-3 rounded-2xl bg-secondary/60 text-sm outline-none focus:ring-2 focus:ring-primary/30 transition-all placeholder:text-muted-foreground"
+        />
       </div>
 
       {/* Compose Box */}
