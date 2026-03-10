@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Heart, MessageCircle, Share2, MoreHorizontal, Trash2, Bookmark, Flag, Send, Plus, ImageIcon } from "lucide-react";
+import { Heart, MessageCircle, Share2, MoreHorizontal, Trash2, Bookmark, Flag, Send, Search } from "lucide-react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import {
   DropdownMenu,
