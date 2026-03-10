@@ -132,11 +132,7 @@ export default function CommunityFeed() {
             <div className="text-sm text-muted-foreground cursor-text rounded-xl bg-secondary/60 px-4 py-3">
               Share a dream experience...
             </div>
-            <div className="flex items-center justify-between mt-3">
-              <button className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors">
-                <ImageIcon className="h-4 w-4" />
-                Photo
-              </button>
+            <div className="flex items-center justify-end mt-3">
               <button className="px-4 py-1.5 rounded-full bg-primary text-primary-foreground text-xs font-medium hover:bg-primary/90 transition-colors">
                 Post
               </button>
