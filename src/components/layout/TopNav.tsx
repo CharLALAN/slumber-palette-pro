@@ -8,7 +8,6 @@ const navItems = [
   { label: "History", path: "/history" },
   { label: "Sleep", path: "/sleep" },
   { label: "Gamification", path: "/gamification" },
-  { label: "Dream Art", path: "/dream-image" },
 ];
 
 interface TopNavProps {

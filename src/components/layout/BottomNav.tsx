@@ -1,4 +1,4 @@
-import { MessageCircle, Brain, Clock, BarChart3, Trophy, Wand2 } from "lucide-react";
+import { MessageCircle, Brain, Clock, BarChart3, Trophy } from "lucide-react";
 import { NavLink, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -8,7 +8,6 @@ const tabs = [
   { label: "History", path: "/history", icon: Clock },
   { label: "Sleep", path: "/sleep", icon: BarChart3 },
   { label: "Quests", path: "/gamification", icon: Trophy },
-  { label: "Art", path: "/dream-image", icon: Wand2 },
 ];
 
 export default function BottomNav() {
