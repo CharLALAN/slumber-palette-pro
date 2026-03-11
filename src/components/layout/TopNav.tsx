@@ -4,9 +4,11 @@ import { motion } from "framer-motion";
 
 const navItems = [
   { label: "Community", path: "/" },
-  { label: "Dream Analysis", path: "/analyze" },
+  { label: "Analyze", path: "/analyze" },
   { label: "History", path: "/history" },
   { label: "Sleep", path: "/sleep" },
+  { label: "Gamification", path: "/gamification" },
+  { label: "Dream Art", path: "/dream-image" },
 ];
 
 interface TopNavProps {

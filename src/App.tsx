@@ -44,6 +44,8 @@ const App = () => {
                   <Route path="/analyze" element={<DreamAnalysis />} />
                   <Route path="/history" element={<History />} />
                   <Route path="/sleep" element={<SleepOptimization />} />
+                  <Route path="/gamification" element={<Gamification />} />
+                  <Route path="/dream-image" element={<DreamImageGen />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </AnimatePresence>
