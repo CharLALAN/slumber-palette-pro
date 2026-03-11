@@ -149,31 +149,35 @@ export default function History() {
 function PanelContent({ dream, onClose }: { dream: typeof mockDreams[0]; onClose: () => void }) {
   const vibe = vibeConfig[dream.vibe];
   return (
-    <div>
-      <div className="flex items-center justify-between mb-6">
-        <span className={`text-xs font-semibold px-3 py-1.5 rounded-full ${vibe.color}`}>
-          {vibe.emoji} {vibe.label}
-        </span>
+    <div className="space-y-6">
+      {/* Header */}
+      <div className="flex items-start justify-between gap-3">
+        <div className="space-y-3">
+          <span className={`inline-block text-xs font-semibold px-3 py-1.5 rounded-full ${vibe.color}`}>
+            {vibe.emoji} {vibe.label}
+          </span>
+          <h2 className="text-xl font-bold leading-tight">{dream.title}</h2>
+          <p className="text-xs text-muted-foreground">{dream.date}</p>
+        </div>
         <motion.button
           whileTap={{ scale: 0.85 }}
           onClick={onClose}
-          className="p-2 rounded-full hover:bg-secondary transition-colors"
+          className="p-2 rounded-full hover:bg-secondary transition-colors shrink-0 mt-1"
         >
           <X className="h-5 w-5" />
         </motion.button>
       </div>
-      <h2 className="text-xl font-bold mb-1">{dream.title}</h2>
-      <p className="text-xs text-muted-foreground mb-6">{dream.date}</p>
-      <div className="space-y-4">
-        <div>
-          <h4 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">Dream Recall</h4>
-          <p className="text-sm leading-relaxed">{dream.snippet}</p>
-        </div>
-        <div className="h-px bg-border/50" />
-        <div>
-          <h4 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">AI Analysis</h4>
-          <p className="text-sm leading-relaxed text-muted-foreground">{dream.analysis}</p>
-        </div>
+
+      {/* Dream Recall */}
+      <div className="rounded-2xl bg-secondary/50 p-4 space-y-2">
+        <h4 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Dream Recall</h4>
+        <p className="text-sm leading-relaxed">{dream.snippet}</p>
+      </div>
+
+      {/* AI Analysis */}
+      <div className="rounded-2xl border border-border/60 p-4 space-y-2">
+        <h4 className="text-xs font-semibold uppercase tracking-wider text-primary">AI Analysis</h4>
+        <p className="text-sm leading-[1.75] text-muted-foreground">{dream.analysis}</p>
       </div>
     </div>
   );
