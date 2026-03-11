@@ -13,7 +13,6 @@ import DreamAnalysis from "@/pages/DreamAnalysis";
 import History from "@/pages/History";
 import SleepOptimization from "@/pages/SleepOptimization";
 import Gamification from "@/pages/Gamification";
-import DreamImageGen from "@/pages/DreamImageGen";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
