@@ -12,6 +12,8 @@ import CommunityFeed from "@/pages/CommunityFeed";
 import DreamAnalysis from "@/pages/DreamAnalysis";
 import History from "@/pages/History";
 import SleepOptimization from "@/pages/SleepOptimization";
+import Gamification from "@/pages/Gamification";
+import DreamImageGen from "@/pages/DreamImageGen";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -42,6 +44,8 @@ const App = () => {
                   <Route path="/analyze" element={<DreamAnalysis />} />
                   <Route path="/history" element={<History />} />
                   <Route path="/sleep" element={<SleepOptimization />} />
+                  <Route path="/gamification" element={<Gamification />} />
+                  <Route path="/dream-image" element={<DreamImageGen />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </AnimatePresence>
