@@ -221,15 +221,15 @@ function PostCard({
               <MoreHorizontal className="h-4 w-4 text-muted-foreground" />
             </motion.button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent align="end" className="rounded-xl border-border/50 min-w-[150px]">
-            <DropdownMenuItem className="rounded-lg gap-2 cursor-pointer text-sm">
-              <Bookmark className="h-4 w-4" /> Save
+          <DropdownMenuContent align="end" className="rounded-xl border-orange-100/50 min-w-[150px]">
+            <DropdownMenuItem className="rounded-lg gap-2 cursor-pointer text-sm text-amber-700">
+              <Bookmark className="h-4 w-4 text-amber-500" /> Save
             </DropdownMenuItem>
-            <DropdownMenuItem className="rounded-lg gap-2 cursor-pointer text-sm">
-              <Flag className="h-4 w-4" /> Report
+            <DropdownMenuItem className="rounded-lg gap-2 cursor-pointer text-sm text-amber-700">
+              <Flag className="h-4 w-4 text-amber-500" /> Report
             </DropdownMenuItem>
             <DropdownMenuItem
-              className="rounded-lg gap-2 cursor-pointer text-sm text-destructive focus:text-destructive"
+              className="rounded-lg gap-2 cursor-pointer text-sm text-red-500 focus:text-red-600"
               onClick={() => onDelete(post.id)}
             >
               <Trash2 className="h-4 w-4" /> Delete
