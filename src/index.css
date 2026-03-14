@@ -104,7 +104,7 @@
   .morning-button {
     @apply inline-flex items-center justify-center gap-2;
     @apply px-8 py-4 rounded-full;
-    @apply bg-gradient-to-r from-orange-400 via-coral-400 to-rose-400;
+    @apply bg-gradient-to-r from-orange-400 via-amber-400 to-rose-400;
     @apply text-white font-semibold text-sm;
     @apply shadow-lg shadow-orange-200/60;
     @apply transition-all duration-300;
