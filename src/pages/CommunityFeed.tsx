@@ -67,12 +67,12 @@ const mockPosts: Post[] = [
 ];
 
 const avatarColors: Record<string, string> = {
-  LS: "from-blue-400 to-indigo-500",
-  OB: "from-amber-400 to-orange-500",
-  SF: "from-violet-400 to-purple-500",
-  KR: "from-emerald-400 to-teal-500",
-  NC: "from-rose-400 to-pink-500",
-  AM: "from-cyan-400 to-blue-500",
+  LS: "from-amber-400 to-orange-500",
+  OB: "from-rose-400 to-coral-500",
+  SF: "from-yellow-400 to-amber-500",
+  KR: "from-orange-400 to-rose-400",
+  NC: "from-coral-400 to-orange-500",
+  AM: "from-amber-400 to-yellow-400",
   YO: "from-primary to-primary",
 };
 
