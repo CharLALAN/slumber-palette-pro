@@ -218,3 +218,12 @@
   0%, 100% { opacity: 1; }
   50% { opacity: 0.7; }
 }
+
+@keyframes sunrise-glow {
+  0%, 100% { 
+    box-shadow: 0 0 40px -10px hsl(20 90% 60% / 0.3);
+  }
+  50% { 
+    box-shadow: 0 0 60px -5px hsl(35 100% 65% / 0.4);
+  }
+}
