@@ -6,56 +6,56 @@
 
 @layer base {
   :root {
-    /* Morning Breeze Palette - Soft Pastels */
-    --background: 20 100% 99%;
-    --foreground: 220 20% 35%;
+    /* Morning Sunrise Palette - Warm & Energizing */
+    --background: 30 100% 98%;
+    --foreground: 24 30% 25%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 20% 35%;
+    --card: 30 100% 99%;
+    --card-foreground: 24 30% 25%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 35%;
+    --popover: 30 100% 99%;
+    --popover-foreground: 24 30% 25%;
 
-    /* Soft Primary - Gentle Blue */
-    --primary: 210 80% 68%;
+    /* Warm Primary - Coral Sunrise */
+    --primary: 20 90% 60%;
     --primary-foreground: 0 0% 100%;
 
-    /* Soft Secondary - Lavender Mist */
-    --secondary: 260 60% 96%;
-    --secondary-foreground: 260 30% 40%;
+    /* Soft Secondary - Golden Cream */
+    --secondary: 40 80% 96%;
+    --secondary-foreground: 30 40% 35%;
 
-    --muted: 220 30% 96%;
-    --muted-foreground: 220 15% 55%;
+    --muted: 35 40% 96%;
+    --muted-foreground: 25 20% 50%;
 
-    /* Soft Accent - Peach Glow */
-    --accent: 25 100% 94%;
-    --accent-foreground: 25 50% 35%;
+    /* Energizing Accent - Sunshine Gold */
+    --accent: 45 100% 60%;
+    --accent-foreground: 30 50% 25%;
 
-    --destructive: 0 84% 65%;
+    --destructive: 0 75% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 30% 92%;
-    --input: 220 30% 92%;
-    --ring: 210 80% 68%;
+    --border: 30 40% 90%;
+    --input: 30 40% 90%;
+    --ring: 20 90% 60%;
 
     --radius: 1.5rem;
 
-    /* Dream Theme Colors - Softened */
-    --dream-peaceful: 195 70% 65%;
-    --dream-nightmare: 350 70% 70%;
-    --dream-lucid: 270 60% 75%;
-    --dream-adventure: 35 90% 70%;
-    --dream-romantic: 330 70% 80%;
+    /* Dream Theme Colors - Warm Sunrise Tones */
+    --dream-peaceful: 35 80% 70%;
+    --dream-nightmare: 350 65% 65%;
+    --dream-lucid: 280 60% 70%;
+    --dream-adventure: 30 90% 65%;
+    --dream-romantic: 340 70% 75%;
 
-    /* Sidebar */
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 220 20% 35%;
-    --sidebar-primary: 210 80% 68%;
+    /* Sidebar - Warm Tones */
+    --sidebar-background: 30 100% 99%;
+    --sidebar-foreground: 24 30% 25%;
+    --sidebar-primary: 20 90% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 260 60% 96%;
-    --sidebar-accent-foreground: 260 30% 40%;
-    --sidebar-border: 220 30% 92%;
-    --sidebar-ring: 210 80% 68%;
+    --sidebar-accent: 40 80% 96%;
+    --sidebar-accent-foreground: 30 40% 35%;
+    --sidebar-border: 30 40% 90%;
+    --sidebar-ring: 20 90% 60%;
   }
 }
 
@@ -69,41 +69,47 @@
   body {
     @apply antialiased;
     font-family: 'DM Sans', 'Inter', system-ui, sans-serif;
-    background: linear-gradient(135deg, hsl(350 100% 98%) 0%, hsl(210 100% 97%) 50%, hsl(180 60% 96%) 100%);
+    background: linear-gradient(135deg, 
+      hsl(350 100% 97%) 0%, 
+      hsl(30 100% 95%) 25%,
+      hsl(45 100% 92%) 50%, 
+      hsl(35 80% 94%) 75%,
+      hsl(25 70% 96%) 100%
+    );
     min-height: 100vh;
     background-attachment: fixed;
   }
 }
 
 @layer components {
-  /* Soft Glassmorphism Card */
+  /* Warm Glassmorphism Card */
   .morning-card {
-    @apply bg-white/70 backdrop-blur-md rounded-3xl p-6;
+    @apply bg-white/75 backdrop-blur-md rounded-3xl p-6;
     box-shadow: 
-      0 4px 6px -1px hsl(210 80% 68% / 0.05),
-      0 10px 20px -2px hsl(210 80% 68% / 0.08),
-      0 0 0 1px hsl(210 80% 68% / 0.03);
+      0 4px 6px -1px hsl(20 90% 60% / 0.06),
+      0 10px 20px -2px hsl(30 80% 50% / 0.08),
+      0 0 0 1px hsl(30 60% 70% / 0.05);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .morning-card:hover {
     box-shadow: 
-      0 8px 12px -1px hsl(210 80% 68% / 0.08),
-      0 20px 40px -4px hsl(210 80% 68% / 0.12),
-      0 0 0 1px hsl(210 80% 68% / 0.05);
+      0 8px 12px -1px hsl(20 90% 60% / 0.1),
+      0 20px 40px -4px hsl(30 80% 50% / 0.12),
+      0 0 0 1px hsl(30 60% 70% / 0.08);
     transform: translateY(-2px);
   }
 
-  /* Primary Action Button - Playful & Bouncy */
+  /* Sunrise Primary Button - Warm & Bouncy */
   .morning-button {
     @apply inline-flex items-center justify-center gap-2;
     @apply px-8 py-4 rounded-full;
-    @apply bg-gradient-to-r from-sky-400 to-indigo-400;
+    @apply bg-gradient-to-r from-orange-400 via-amber-400 to-rose-400;
     @apply text-white font-semibold text-sm;
-    @apply shadow-lg shadow-sky-200/50;
+    @apply shadow-lg shadow-orange-200/60;
     @apply transition-all duration-300;
     @apply hover:-translate-y-1;
-    @apply hover:shadow-xl hover:shadow-sky-300/60;
+    @apply hover:shadow-xl hover:shadow-orange-300/70;
     @apply active:scale-95;
     @apply disabled:opacity-50 disabled:hover:translate-y-0 disabled:cursor-not-allowed;
   }
@@ -112,80 +118,80 @@
   .morning-button-secondary {
     @apply inline-flex items-center justify-center gap-2;
     @apply px-6 py-3 rounded-full;
-    @apply bg-white/60 backdrop-blur-sm;
-    @apply text-slate-600 font-medium text-sm;
-    @apply border border-white/50;
-    @apply shadow-sm shadow-slate-200/30;
+    @apply bg-white/70 backdrop-blur-sm;
+    @apply text-amber-700 font-medium text-sm;
+    @apply border border-orange-100/60;
+    @apply shadow-sm shadow-orange-200/30;
     @apply transition-all duration-300;
-    @apply hover:-translate-y-0.5 hover:bg-white/80;
+    @apply hover:-translate-y-0.5 hover:bg-white/85;
     @apply hover:shadow-md;
     @apply active:scale-95;
   }
 
-  /* Main Layout Background */
+  /* Main Layout Background - Sunrise Gradient */
   .morning-bg {
     background: linear-gradient(135deg, 
-      hsl(350 100% 98%) 0%, 
-      hsl(330 100% 97%) 15%,
-      hsl(210 100% 97%) 50%, 
-      hsl(180 60% 96%) 85%,
-      hsl(160 50% 97%) 100%
+      hsl(350 100% 97%) 0%, 
+      hsl(30 100% 95%) 15%,
+      hsl(45 100% 92%) 50%, 
+      hsl(35 80% 94%) 85%,
+      hsl(25 70% 96%) 100%
     );
     min-height: 100vh;
     background-attachment: fixed;
   }
 
-  /* Glow Effects */
+  /* Warm Glow Effects */
   .morning-glow {
     box-shadow: 
-      0 0 40px -10px hsl(210 80% 68% / 0.2),
-      0 0 80px -20px hsl(260 60% 75% / 0.15);
+      0 0 40px -10px hsl(20 90% 60% / 0.25),
+      0 0 80px -20px hsl(35 80% 65% / 0.2);
   }
   
   .morning-glow-focus {
     box-shadow: 
-      0 0 60px -10px hsl(210 80% 68% / 0.3),
-      0 0 100px -20px hsl(260 60% 75% / 0.2),
-      0 0 0 3px hsl(210 80% 68% / 0.1);
+      0 0 60px -10px hsl(20 90% 60% / 0.35),
+      0 0 100px -20px hsl(35 80% 65% / 0.25),
+      0 0 0 3px hsl(20 90% 60% / 0.12);
   }
 
-  /* Typography */
+  /* Typography - Warm Tones */
   .morning-heading {
-    @apply text-slate-700 font-semibold tracking-wide leading-tight;
+    @apply text-amber-900 font-semibold tracking-wide leading-tight;
   }
   
   .morning-text {
-    @apply text-slate-600 leading-relaxed;
+    @apply text-amber-800/80 leading-relaxed;
   }
 
-  /* Input Styling */
+  /* Input Styling - Warm Accents */
   .morning-input {
-    @apply w-full bg-white/60 backdrop-blur-sm rounded-2xl;
-    @apply px-5 py-4 text-sm text-slate-700;
-    @apply border border-sky-100/50;
-    @apply placeholder:text-slate-400;
-    @apply focus:outline-none focus:ring-2 focus:ring-sky-300/50;
+    @apply w-full bg-white/70 backdrop-blur-sm rounded-2xl;
+    @apply px-5 py-4 text-sm text-amber-900;
+    @apply border border-orange-100/60;
+    @apply placeholder:text-amber-400/70;
+    @apply focus:outline-none focus:ring-2 focus:ring-orange-300/50;
     @apply transition-all duration-300;
   }
   
   .morning-input:focus {
-    box-shadow: 0 0 30px -5px hsl(210 80% 68% / 0.15);
-    @apply bg-white/80;
+    box-shadow: 0 0 30px -5px hsl(20 90% 60% / 0.2);
+    @apply bg-white/85;
   }
 }
 
 @layer utilities {
-  /* Soft Shadow Utilities */
+  /* Warm Shadow Utilities */
   .shadow-morning {
     box-shadow: 
-      0 4px 6px -1px hsl(210 80% 68% / 0.05),
-      0 10px 20px -2px hsl(210 80% 68% / 0.08);
+      0 4px 6px -1px hsl(20 90% 60% / 0.06),
+      0 10px 20px -2px hsl(30 80% 50% / 0.08);
   }
   
   .shadow-morning-lg {
     box-shadow: 
-      0 8px 12px -1px hsl(210 80% 68% / 0.08),
-      0 20px 40px -4px hsl(210 80% 68% / 0.12);
+      0 8px 12px -1px hsl(20 90% 60% / 0.1),
+      0 20px 40px -4px hsl(30 80% 50% / 0.12);
   }
 
   /* Animation Utilities */
@@ -195,6 +201,10 @@
   
   .animate-pulse-soft {
     animation: pulse-soft 4s ease-in-out infinite;
+  }
+
+  .animate-sunrise {
+    animation: sunrise-glow 8s ease-in-out infinite;
   }
 }
 
@@ -207,4 +217,13 @@
 @keyframes pulse-soft {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.7; }
+}
+
+@keyframes sunrise-glow {
+  0%, 100% { 
+    box-shadow: 0 0 40px -10px hsl(20 90% 60% / 0.3);
+  }
+  50% { 
+    box-shadow: 0 0 60px -5px hsl(35 100% 65% / 0.4);
+  }
 }

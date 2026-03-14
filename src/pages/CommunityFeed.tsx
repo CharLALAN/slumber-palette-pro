@@ -67,12 +67,12 @@ const mockPosts: Post[] = [
 ];
 
 const avatarColors: Record<string, string> = {
-  LS: "from-blue-400 to-indigo-500",
-  OB: "from-amber-400 to-orange-500",
-  SF: "from-violet-400 to-purple-500",
-  KR: "from-emerald-400 to-teal-500",
-  NC: "from-rose-400 to-pink-500",
-  AM: "from-cyan-400 to-blue-500",
+  LS: "from-amber-400 to-orange-500",
+  OB: "from-rose-400 to-coral-500",
+  SF: "from-yellow-400 to-amber-500",
+  KR: "from-orange-400 to-rose-400",
+  NC: "from-coral-400 to-orange-500",
+  AM: "from-amber-400 to-yellow-400",
   YO: "from-primary to-primary",
 };
 
@@ -117,11 +117,11 @@ export default function CommunityFeed() {
 
       {/* Search */}
       <div className="relative mb-6">
-        <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+        <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-amber-500/70" />
         <input
           type="text"
           placeholder="Search dreams..."
-          className="w-full pl-11 pr-4 py-3 rounded-2xl bg-secondary/60 text-sm outline-none focus:ring-2 focus:ring-primary/30 transition-all placeholder:text-muted-foreground"
+          className="w-full pl-11 pr-4 py-3 rounded-2xl bg-amber-50/70 text-sm outline-none focus:ring-2 focus:ring-orange-300/50 transition-all placeholder:text-amber-400/70"
         />
       </div>
 
@@ -139,11 +139,11 @@ export default function CommunityFeed() {
             </AvatarFallback>
           </Avatar>
           <div className="flex-1">
-            <div className="text-sm text-muted-foreground cursor-text rounded-xl bg-secondary/60 px-4 py-3">
+            <div className="text-sm text-amber-600/70 cursor-text rounded-xl bg-amber-50/60 px-4 py-3">
               Share a dream experience...
             </div>
             <div className="flex items-center justify-end mt-3">
-              <button className="px-4 py-1.5 rounded-full bg-primary text-primary-foreground text-xs font-medium hover:bg-primary/90 transition-colors">
+              <button className="px-4 py-1.5 rounded-full bg-primary text-primary-foreground text-xs font-medium hover:bg-primary/90 transition-colors shadow-sm shadow-orange-200/50">
                 Post
               </button>
             </div>
@@ -221,15 +221,15 @@ function PostCard({
               <MoreHorizontal className="h-4 w-4 text-muted-foreground" />
             </motion.button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent align="end" className="rounded-xl border-border/50 min-w-[150px]">
-            <DropdownMenuItem className="rounded-lg gap-2 cursor-pointer text-sm">
-              <Bookmark className="h-4 w-4" /> Save
+          <DropdownMenuContent align="end" className="rounded-xl border-orange-100/50 min-w-[150px]">
+            <DropdownMenuItem className="rounded-lg gap-2 cursor-pointer text-sm text-amber-700">
+              <Bookmark className="h-4 w-4 text-amber-500" /> Save
             </DropdownMenuItem>
-            <DropdownMenuItem className="rounded-lg gap-2 cursor-pointer text-sm">
-              <Flag className="h-4 w-4" /> Report
+            <DropdownMenuItem className="rounded-lg gap-2 cursor-pointer text-sm text-amber-700">
+              <Flag className="h-4 w-4 text-amber-500" /> Report
             </DropdownMenuItem>
             <DropdownMenuItem
-              className="rounded-lg gap-2 cursor-pointer text-sm text-destructive focus:text-destructive"
+              className="rounded-lg gap-2 cursor-pointer text-sm text-red-500 focus:text-red-600"
               onClick={() => onDelete(post.id)}
             >
               <Trash2 className="h-4 w-4" /> Delete
@@ -242,11 +242,11 @@ function PostCard({
       <p className="text-sm leading-relaxed text-foreground/90 mb-5">{post.content}</p>
 
       {/* Action Bar */}
-      <div className="flex items-center gap-1 pt-3 border-t border-border/40">
+      <div className="flex items-center gap-1 pt-3 border-t border-orange-100/40">
         <motion.button
           whileTap={{ scale: 0.85 }}
           onClick={() => onLike(post.id)}
-          className="flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-secondary/80 transition-colors"
+          className="flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-orange-50 transition-colors"
         >
           <motion.div
             animate={post.liked ? { scale: [1, 1.3, 1] } : {}}
@@ -254,13 +254,13 @@ function PostCard({
           >
             <Heart
               className={`h-[18px] w-[18px] transition-colors ${
-                post.liked ? "fill-red-500 text-red-500" : "text-muted-foreground"
+                post.liked ? "fill-rose-500 text-rose-500" : "text-amber-500/70"
               }`}
             />
           </motion.div>
           <span
             className={`text-xs font-medium ${
-              post.liked ? "text-red-500" : "text-muted-foreground"
+              post.liked ? "text-rose-500" : "text-amber-600/80"
             }`}
           >
             {post.likes}
@@ -270,20 +270,20 @@ function PostCard({
         <motion.button
           whileTap={{ scale: 0.9 }}
           onClick={() => setShowComments(!showComments)}
-          className={`flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-secondary/80 transition-colors ${
-            showComments ? "bg-secondary/60" : ""
+          className={`flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-orange-50 transition-colors ${
+            showComments ? "bg-orange-50/70" : ""
           }`}
         >
-          <MessageCircle className="h-[18px] w-[18px] text-muted-foreground" />
-          <span className="text-xs font-medium text-muted-foreground">{post.comments.length}</span>
+          <MessageCircle className="h-[18px] w-[18px] text-amber-500/70" />
+          <span className="text-xs font-medium text-amber-600/80">{post.comments.length}</span>
         </motion.button>
 
         <motion.button
           whileTap={{ scale: 0.9 }}
-          className="flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-secondary/80 transition-colors ml-auto"
+          className="flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-orange-50 transition-colors ml-auto"
         >
-          <Share2 className="h-[18px] w-[18px] text-muted-foreground" />
-          <span className="text-xs font-medium text-muted-foreground">Share</span>
+          <Share2 className="h-[18px] w-[18px] text-amber-500/70" />
+          <span className="text-xs font-medium text-amber-600/80">Share</span>
         </motion.button>
       </div>
 
@@ -315,12 +315,12 @@ function PostCard({
                         {c.initials}
                       </AvatarFallback>
                     </Avatar>
-                    <div className="flex-1 bg-secondary/50 rounded-2xl px-3.5 py-2.5">
+                    <div className="flex-1 bg-amber-50/60 rounded-2xl px-3.5 py-2.5">
                       <div className="flex items-baseline gap-2">
-                        <p className="text-xs font-semibold">{c.user}</p>
-                        <p className="text-[10px] text-muted-foreground">{c.time}</p>
+                        <p className="text-xs font-semibold text-amber-800">{c.user}</p>
+                        <p className="text-[10px] text-amber-500/70">{c.time}</p>
                       </div>
-                      <p className="text-xs text-foreground/80 leading-relaxed mt-0.5">{c.text}</p>
+                      <p className="text-xs text-amber-800/80 leading-relaxed mt-0.5">{c.text}</p>
                     </div>
                   </motion.div>
                 );
