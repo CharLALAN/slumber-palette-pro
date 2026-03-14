@@ -139,11 +139,11 @@ export default function CommunityFeed() {
             </AvatarFallback>
           </Avatar>
           <div className="flex-1">
-            <div className="text-sm text-muted-foreground cursor-text rounded-xl bg-secondary/60 px-4 py-3">
+            <div className="text-sm text-amber-600/70 cursor-text rounded-xl bg-amber-50/60 px-4 py-3">
               Share a dream experience...
             </div>
             <div className="flex items-center justify-end mt-3">
-              <button className="px-4 py-1.5 rounded-full bg-primary text-primary-foreground text-xs font-medium hover:bg-primary/90 transition-colors">
+              <button className="px-4 py-1.5 rounded-full bg-primary text-primary-foreground text-xs font-medium hover:bg-primary/90 transition-colors shadow-sm shadow-orange-200/50">
                 Post
               </button>
             </div>
