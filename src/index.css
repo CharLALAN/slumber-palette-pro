@@ -128,55 +128,55 @@
     @apply active:scale-95;
   }
 
-  /* Main Layout Background */
+  /* Main Layout Background - Sunrise Gradient */
   .morning-bg {
     background: linear-gradient(135deg, 
-      hsl(350 100% 98%) 0%, 
-      hsl(330 100% 97%) 15%,
-      hsl(210 100% 97%) 50%, 
-      hsl(180 60% 96%) 85%,
-      hsl(160 50% 97%) 100%
+      hsl(350 100% 97%) 0%, 
+      hsl(30 100% 95%) 15%,
+      hsl(45 100% 92%) 50%, 
+      hsl(35 80% 94%) 85%,
+      hsl(25 70% 96%) 100%
     );
     min-height: 100vh;
     background-attachment: fixed;
   }
 
-  /* Glow Effects */
+  /* Warm Glow Effects */
   .morning-glow {
     box-shadow: 
-      0 0 40px -10px hsl(210 80% 68% / 0.2),
-      0 0 80px -20px hsl(260 60% 75% / 0.15);
+      0 0 40px -10px hsl(20 90% 60% / 0.25),
+      0 0 80px -20px hsl(35 80% 65% / 0.2);
   }
   
   .morning-glow-focus {
     box-shadow: 
-      0 0 60px -10px hsl(210 80% 68% / 0.3),
-      0 0 100px -20px hsl(260 60% 75% / 0.2),
-      0 0 0 3px hsl(210 80% 68% / 0.1);
+      0 0 60px -10px hsl(20 90% 60% / 0.35),
+      0 0 100px -20px hsl(35 80% 65% / 0.25),
+      0 0 0 3px hsl(20 90% 60% / 0.12);
   }
 
-  /* Typography */
+  /* Typography - Warm Tones */
   .morning-heading {
-    @apply text-slate-700 font-semibold tracking-wide leading-tight;
+    @apply text-amber-900 font-semibold tracking-wide leading-tight;
   }
   
   .morning-text {
-    @apply text-slate-600 leading-relaxed;
+    @apply text-amber-800/80 leading-relaxed;
   }
 
-  /* Input Styling */
+  /* Input Styling - Warm Accents */
   .morning-input {
-    @apply w-full bg-white/60 backdrop-blur-sm rounded-2xl;
-    @apply px-5 py-4 text-sm text-slate-700;
-    @apply border border-sky-100/50;
-    @apply placeholder:text-slate-400;
-    @apply focus:outline-none focus:ring-2 focus:ring-sky-300/50;
+    @apply w-full bg-white/70 backdrop-blur-sm rounded-2xl;
+    @apply px-5 py-4 text-sm text-amber-900;
+    @apply border border-orange-100/60;
+    @apply placeholder:text-amber-400/70;
+    @apply focus:outline-none focus:ring-2 focus:ring-orange-300/50;
     @apply transition-all duration-300;
   }
   
   .morning-input:focus {
-    box-shadow: 0 0 30px -5px hsl(210 80% 68% / 0.15);
-    @apply bg-white/80;
+    box-shadow: 0 0 30px -5px hsl(20 90% 60% / 0.2);
+    @apply bg-white/85;
   }
 }
 
