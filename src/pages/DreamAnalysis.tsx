@@ -29,7 +29,7 @@ const itemVariants = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: [0.25, 0.46, 0.45, 0.94],
+      ease: "easeOut" as const,
     },
   },
 };
@@ -39,7 +39,7 @@ const floatVariants = {
     y: [0, -8, 0],
     transition: {
       duration: 4,
-      ease: "easeInOut",
+      ease: "easeInOut" as const,
       repeat: Infinity,
     },
   },
