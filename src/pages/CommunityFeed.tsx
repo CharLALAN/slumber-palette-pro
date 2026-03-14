@@ -315,12 +315,12 @@ function PostCard({
                         {c.initials}
                       </AvatarFallback>
                     </Avatar>
-                    <div className="flex-1 bg-secondary/50 rounded-2xl px-3.5 py-2.5">
+                    <div className="flex-1 bg-amber-50/60 rounded-2xl px-3.5 py-2.5">
                       <div className="flex items-baseline gap-2">
-                        <p className="text-xs font-semibold">{c.user}</p>
-                        <p className="text-[10px] text-muted-foreground">{c.time}</p>
+                        <p className="text-xs font-semibold text-amber-800">{c.user}</p>
+                        <p className="text-[10px] text-amber-500/70">{c.time}</p>
                       </div>
-                      <p className="text-xs text-foreground/80 leading-relaxed mt-0.5">{c.text}</p>
+                      <p className="text-xs text-amber-800/80 leading-relaxed mt-0.5">{c.text}</p>
                     </div>
                   </motion.div>
                 );
