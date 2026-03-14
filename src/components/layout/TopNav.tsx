@@ -7,7 +7,7 @@ const navItems = [
   { label: "Analyze", path: "/analyze" },
   { label: "History", path: "/history" },
   { label: "Sleep", path: "/sleep" },
-  { label: "Gamification", path: "/gamification" },
+  { label: "Quests", path: "/gamification" },
 ];
 
 interface TopNavProps {
@@ -19,13 +19,15 @@ export default function TopNav({ isDark, toggleTheme }: TopNavProps) {
   const location = useLocation();
 
   return (
-    <header className="hidden md:flex items-center justify-between px-8 py-4 glass-strong sticky top-0 z-50">
-      <div className="flex items-center gap-2">
-        <Sparkles className="h-6 w-6 text-primary" />
-        <span className="text-xl font-bold tracking-tight">Dreamscape</span>
+    <header className="hidden md:flex items-center justify-between px-8 py-4 bg-white/60 backdrop-blur-xl sticky top-0 z-50 shadow-sm shadow-sky-100/20">
+      <div className="flex items-center gap-3">
+        <div className="p-2.5 rounded-2xl bg-gradient-to-br from-sky-400 to-indigo-400">
+          <Sparkles className="h-5 w-5 text-white" />
+        </div>
+        <span className="text-xl font-bold tracking-tight text-slate-700">Dreamscape</span>
       </div>
 
-      <nav className="flex items-center gap-1 bg-secondary/60 rounded-full p-1">
+      <nav className="flex items-center gap-1 bg-slate-100/60 rounded-full p-1.5">
         {navItems.map((item) => {
           const isActive = location.pathname === item.path;
           return (
@@ -33,13 +35,13 @@ export default function TopNav({ isDark, toggleTheme }: TopNavProps) {
               {isActive && (
                 <motion.div
                   layoutId="nav-pill"
-                  className="absolute inset-0 bg-card rounded-full shadow-soft"
+                  className="absolute inset-0 bg-white rounded-full shadow-md shadow-sky-200/30"
                   transition={{ type: "spring", stiffness: 400, damping: 30 }}
                 />
               )}
               <span
                 className={`relative z-10 px-5 py-2 text-sm font-medium rounded-full block transition-colors ${
-                  isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+                  isActive ? "text-slate-700" : "text-slate-500 hover:text-slate-700"
                 }`}
               >
                 {item.label}
@@ -51,10 +53,11 @@ export default function TopNav({ isDark, toggleTheme }: TopNavProps) {
 
       <button
         onClick={toggleTheme}
-        className="p-2.5 rounded-full bg-secondary hover:bg-accent transition-colors"
+        className="p-2.5 rounded-xl bg-slate-100/80 hover:bg-sky-50 text-slate-500 hover:text-sky-500 transition-all duration-300"
       >
         {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
       </button>
     </header>
   );
 }
+
