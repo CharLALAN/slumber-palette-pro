@@ -6,56 +6,56 @@
 
 @layer base {
   :root {
-    /* Morning Breeze Palette - Soft Pastels */
-    --background: 20 100% 99%;
-    --foreground: 220 20% 35%;
+    /* Morning Sunrise Palette - Warm & Energizing */
+    --background: 30 100% 98%;
+    --foreground: 24 30% 25%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 20% 35%;
+    --card: 30 100% 99%;
+    --card-foreground: 24 30% 25%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 35%;
+    --popover: 30 100% 99%;
+    --popover-foreground: 24 30% 25%;
 
-    /* Soft Primary - Gentle Blue */
-    --primary: 210 80% 68%;
+    /* Warm Primary - Coral Sunrise */
+    --primary: 20 90% 60%;
     --primary-foreground: 0 0% 100%;
 
-    /* Soft Secondary - Lavender Mist */
-    --secondary: 260 60% 96%;
-    --secondary-foreground: 260 30% 40%;
+    /* Soft Secondary - Golden Cream */
+    --secondary: 40 80% 96%;
+    --secondary-foreground: 30 40% 35%;
 
-    --muted: 220 30% 96%;
-    --muted-foreground: 220 15% 55%;
+    --muted: 35 40% 96%;
+    --muted-foreground: 25 20% 50%;
 
-    /* Soft Accent - Peach Glow */
-    --accent: 25 100% 94%;
-    --accent-foreground: 25 50% 35%;
+    /* Energizing Accent - Sunshine Gold */
+    --accent: 45 100% 60%;
+    --accent-foreground: 30 50% 25%;
 
-    --destructive: 0 84% 65%;
+    --destructive: 0 75% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 30% 92%;
-    --input: 220 30% 92%;
-    --ring: 210 80% 68%;
+    --border: 30 40% 90%;
+    --input: 30 40% 90%;
+    --ring: 20 90% 60%;
 
     --radius: 1.5rem;
 
-    /* Dream Theme Colors - Softened */
-    --dream-peaceful: 195 70% 65%;
-    --dream-nightmare: 350 70% 70%;
-    --dream-lucid: 270 60% 75%;
-    --dream-adventure: 35 90% 70%;
-    --dream-romantic: 330 70% 80%;
+    /* Dream Theme Colors - Warm Sunrise Tones */
+    --dream-peaceful: 35 80% 70%;
+    --dream-nightmare: 350 65% 65%;
+    --dream-lucid: 280 60% 70%;
+    --dream-adventure: 30 90% 65%;
+    --dream-romantic: 340 70% 75%;
 
-    /* Sidebar */
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 220 20% 35%;
-    --sidebar-primary: 210 80% 68%;
+    /* Sidebar - Warm Tones */
+    --sidebar-background: 30 100% 99%;
+    --sidebar-foreground: 24 30% 25%;
+    --sidebar-primary: 20 90% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 260 60% 96%;
-    --sidebar-accent-foreground: 260 30% 40%;
-    --sidebar-border: 220 30% 92%;
-    --sidebar-ring: 210 80% 68%;
+    --sidebar-accent: 40 80% 96%;
+    --sidebar-accent-foreground: 30 40% 35%;
+    --sidebar-border: 30 40% 90%;
+    --sidebar-ring: 20 90% 60%;
   }
 }
 
