@@ -82,34 +82,34 @@
 }
 
 @layer components {
-  /* Soft Glassmorphism Card */
+  /* Warm Glassmorphism Card */
   .morning-card {
-    @apply bg-white/70 backdrop-blur-md rounded-3xl p-6;
+    @apply bg-white/75 backdrop-blur-md rounded-3xl p-6;
     box-shadow: 
-      0 4px 6px -1px hsl(210 80% 68% / 0.05),
-      0 10px 20px -2px hsl(210 80% 68% / 0.08),
-      0 0 0 1px hsl(210 80% 68% / 0.03);
+      0 4px 6px -1px hsl(20 90% 60% / 0.06),
+      0 10px 20px -2px hsl(30 80% 50% / 0.08),
+      0 0 0 1px hsl(30 60% 70% / 0.05);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .morning-card:hover {
     box-shadow: 
-      0 8px 12px -1px hsl(210 80% 68% / 0.08),
-      0 20px 40px -4px hsl(210 80% 68% / 0.12),
-      0 0 0 1px hsl(210 80% 68% / 0.05);
+      0 8px 12px -1px hsl(20 90% 60% / 0.1),
+      0 20px 40px -4px hsl(30 80% 50% / 0.12),
+      0 0 0 1px hsl(30 60% 70% / 0.08);
     transform: translateY(-2px);
   }
 
-  /* Primary Action Button - Playful & Bouncy */
+  /* Sunrise Primary Button - Warm & Bouncy */
   .morning-button {
     @apply inline-flex items-center justify-center gap-2;
     @apply px-8 py-4 rounded-full;
-    @apply bg-gradient-to-r from-sky-400 to-indigo-400;
+    @apply bg-gradient-to-r from-orange-400 via-coral-400 to-rose-400;
     @apply text-white font-semibold text-sm;
-    @apply shadow-lg shadow-sky-200/50;
+    @apply shadow-lg shadow-orange-200/60;
     @apply transition-all duration-300;
     @apply hover:-translate-y-1;
-    @apply hover:shadow-xl hover:shadow-sky-300/60;
+    @apply hover:shadow-xl hover:shadow-orange-300/70;
     @apply active:scale-95;
     @apply disabled:opacity-50 disabled:hover:translate-y-0 disabled:cursor-not-allowed;
   }
@@ -118,12 +118,12 @@
   .morning-button-secondary {
     @apply inline-flex items-center justify-center gap-2;
     @apply px-6 py-3 rounded-full;
-    @apply bg-white/60 backdrop-blur-sm;
-    @apply text-slate-600 font-medium text-sm;
-    @apply border border-white/50;
-    @apply shadow-sm shadow-slate-200/30;
+    @apply bg-white/70 backdrop-blur-sm;
+    @apply text-amber-700 font-medium text-sm;
+    @apply border border-orange-100/60;
+    @apply shadow-sm shadow-orange-200/30;
     @apply transition-all duration-300;
-    @apply hover:-translate-y-0.5 hover:bg-white/80;
+    @apply hover:-translate-y-0.5 hover:bg-white/85;
     @apply hover:shadow-md;
     @apply active:scale-95;
   }
