@@ -242,11 +242,11 @@ function PostCard({
       <p className="text-sm leading-relaxed text-foreground/90 mb-5">{post.content}</p>
 
       {/* Action Bar */}
-      <div className="flex items-center gap-1 pt-3 border-t border-border/40">
+      <div className="flex items-center gap-1 pt-3 border-t border-orange-100/40">
         <motion.button
           whileTap={{ scale: 0.85 }}
           onClick={() => onLike(post.id)}
-          className="flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-secondary/80 transition-colors"
+          className="flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-orange-50 transition-colors"
         >
           <motion.div
             animate={post.liked ? { scale: [1, 1.3, 1] } : {}}
@@ -254,13 +254,13 @@ function PostCard({
           >
             <Heart
               className={`h-[18px] w-[18px] transition-colors ${
-                post.liked ? "fill-red-500 text-red-500" : "text-muted-foreground"
+                post.liked ? "fill-rose-500 text-rose-500" : "text-amber-500/70"
               }`}
             />
           </motion.div>
           <span
             className={`text-xs font-medium ${
-              post.liked ? "text-red-500" : "text-muted-foreground"
+              post.liked ? "text-rose-500" : "text-amber-600/80"
             }`}
           >
             {post.likes}
@@ -270,20 +270,20 @@ function PostCard({
         <motion.button
           whileTap={{ scale: 0.9 }}
           onClick={() => setShowComments(!showComments)}
-          className={`flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-secondary/80 transition-colors ${
-            showComments ? "bg-secondary/60" : ""
+          className={`flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-orange-50 transition-colors ${
+            showComments ? "bg-orange-50/70" : ""
           }`}
         >
-          <MessageCircle className="h-[18px] w-[18px] text-muted-foreground" />
-          <span className="text-xs font-medium text-muted-foreground">{post.comments.length}</span>
+          <MessageCircle className="h-[18px] w-[18px] text-amber-500/70" />
+          <span className="text-xs font-medium text-amber-600/80">{post.comments.length}</span>
         </motion.button>
 
         <motion.button
           whileTap={{ scale: 0.9 }}
-          className="flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-secondary/80 transition-colors ml-auto"
+          className="flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-orange-50 transition-colors ml-auto"
         >
-          <Share2 className="h-[18px] w-[18px] text-muted-foreground" />
-          <span className="text-xs font-medium text-muted-foreground">Share</span>
+          <Share2 className="h-[18px] w-[18px] text-amber-500/70" />
+          <span className="text-xs font-medium text-amber-600/80">Share</span>
         </motion.button>
       </div>
 
