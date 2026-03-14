@@ -181,17 +181,17 @@
 }
 
 @layer utilities {
-  /* Soft Shadow Utilities */
+  /* Warm Shadow Utilities */
   .shadow-morning {
     box-shadow: 
-      0 4px 6px -1px hsl(210 80% 68% / 0.05),
-      0 10px 20px -2px hsl(210 80% 68% / 0.08);
+      0 4px 6px -1px hsl(20 90% 60% / 0.06),
+      0 10px 20px -2px hsl(30 80% 50% / 0.08);
   }
   
   .shadow-morning-lg {
     box-shadow: 
-      0 8px 12px -1px hsl(210 80% 68% / 0.08),
-      0 20px 40px -4px hsl(210 80% 68% / 0.12);
+      0 8px 12px -1px hsl(20 90% 60% / 0.1),
+      0 20px 40px -4px hsl(30 80% 50% / 0.12);
   }
 
   /* Animation Utilities */
@@ -201,6 +201,10 @@
   
   .animate-pulse-soft {
     animation: pulse-soft 4s ease-in-out infinite;
+  }
+
+  .animate-sunrise {
+    animation: sunrise-glow 8s ease-in-out infinite;
   }
 }
 
