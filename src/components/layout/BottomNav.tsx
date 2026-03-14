@@ -14,7 +14,7 @@ export default function BottomNav() {
   const location = useLocation();
 
   return (
-    <nav className="md:hidden fixed bottom-4 left-4 right-4 z-50 bg-white/85 backdrop-blur-xl rounded-3xl px-2 py-2 flex justify-around items-center shadow-lg shadow-orange-100/30 border border-orange-100/40">
+    <nav className="md:hidden fixed bottom-4 left-4 right-4 z-50 bg-white/80 backdrop-blur-xl rounded-3xl px-2 py-2 flex justify-around items-center shadow-lg shadow-sky-100/30 border border-sky-100/30">
       {tabs.map((tab) => {
         const isActive = location.pathname === tab.path;
         const Icon = tab.icon;
@@ -23,13 +23,13 @@ export default function BottomNav() {
             <motion.div
               whileTap={{ scale: 0.85 }}
               className={`flex flex-col items-center gap-1 py-2 rounded-2xl transition-colors ${
-                isActive ? "text-orange-500" : "text-amber-400/80"
+                isActive ? "text-sky-500" : "text-slate-400"
               }`}
             >
               {isActive && (
                 <motion.div
                   layoutId="bottom-pill"
-                  className="absolute inset-1 bg-gradient-to-br from-orange-100 to-amber-100 rounded-2xl"
+                  className="absolute inset-1 bg-gradient-to-br from-sky-100 to-indigo-100 rounded-2xl"
                   transition={{ type: "spring", stiffness: 400, damping: 30 }}
                 />
               )}
