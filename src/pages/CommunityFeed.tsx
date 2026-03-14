@@ -117,11 +117,11 @@ export default function CommunityFeed() {
 
       {/* Search */}
       <div className="relative mb-6">
-        <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+        <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-amber-500/70" />
         <input
           type="text"
           placeholder="Search dreams..."
-          className="w-full pl-11 pr-4 py-3 rounded-2xl bg-secondary/60 text-sm outline-none focus:ring-2 focus:ring-primary/30 transition-all placeholder:text-muted-foreground"
+          className="w-full pl-11 pr-4 py-3 rounded-2xl bg-amber-50/70 text-sm outline-none focus:ring-2 focus:ring-orange-300/50 transition-all placeholder:text-amber-400/70"
         />
       </div>
 
