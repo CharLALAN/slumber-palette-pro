@@ -6,56 +6,96 @@
 
 @layer base {
   :root {
-    /* Morning Breeze Palette - Soft Pastels */
-    --background: 20 100% 99%;
-    --foreground: 220 20% 35%;
+    --background: 220 20% 97%;
+    --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 20% 35%;
+    --card-foreground: 222 47% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 35%;
+    --popover-foreground: 222 47% 11%;
 
-    /* Soft Primary - Gentle Blue */
-    --primary: 210 80% 68%;
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
 
-    /* Soft Secondary - Lavender Mist */
-    --secondary: 260 60% 96%;
-    --secondary-foreground: 260 30% 40%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222 47% 11%;
 
-    --muted: 220 30% 96%;
-    --muted-foreground: 220 15% 55%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
 
-    /* Soft Accent - Peach Glow */
-    --accent: 25 100% 94%;
-    --accent-foreground: 25 50% 35%;
+    --accent: 220 14% 96%;
+    --accent-foreground: 222 47% 11%;
 
-    --destructive: 0 84% 65%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 30% 92%;
-    --input: 220 30% 92%;
-    --ring: 210 80% 68%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
 
-    --radius: 1.5rem;
+    --radius: 1rem;
 
-    /* Dream Theme Colors - Softened */
-    --dream-peaceful: 195 70% 65%;
-    --dream-nightmare: 350 70% 70%;
-    --dream-lucid: 270 60% 75%;
-    --dream-adventure: 35 90% 70%;
-    --dream-romantic: 330 70% 80%;
+    /* Custom tokens */
+    --glass-bg: 0 0% 100% / 0.7;
+    --glass-border: 0 0% 100% / 0.5;
+    --glow-primary: 217 91% 60%;
+    --dream-peaceful: 199 89% 48%;
+    --dream-nightmare: 0 72% 51%;
+    --dream-lucid: 271 76% 53%;
+    --dream-adventure: 45 93% 47%;
+    --dream-romantic: 330 81% 60%;
 
-    /* Sidebar */
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 220 20% 35%;
-    --sidebar-primary: 210 80% 68%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217 91% 60%;
+  }
+
+  .dark {
+    --background: 224 30% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 224 30% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 224 30% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 224 20% 18%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 224 20% 18%;
+    --muted-foreground: 220 9% 60%;
+
+    --accent: 224 20% 18%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 224 20% 20%;
+    --input: 224 20% 20%;
+    --ring: 217 91% 60%;
+
+    --glass-bg: 224 30% 12% / 0.7;
+    --glass-border: 224 30% 20% / 0.5;
+
+    --sidebar-background: 224 30% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 217 91% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 260 60% 96%;
-    --sidebar-accent-foreground: 260 30% 40%;
-    --sidebar-border: 220 30% 92%;
-    --sidebar-ring: 210 80% 68%;
+    --sidebar-accent: 224 20% 18%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 224 20% 20%;
+    --sidebar-ring: 217 91% 60%;
   }
 }
 
@@ -63,148 +103,63 @@
   * {
     @apply border-border;
   }
-  html {
-    scroll-behavior: smooth;
-  }
   body {
-    @apply antialiased;
+    @apply bg-background text-foreground font-sans antialiased;
     font-family: 'DM Sans', 'Inter', system-ui, sans-serif;
-    background: linear-gradient(135deg, hsl(350 100% 98%) 0%, hsl(210 100% 97%) 50%, hsl(180 60% 96%) 100%);
-    min-height: 100vh;
-    background-attachment: fixed;
   }
 }
 
 @layer components {
-  /* Soft Glassmorphism Card */
-  .morning-card {
-    @apply bg-white/70 backdrop-blur-md rounded-3xl p-6;
-    box-shadow: 
-      0 4px 6px -1px hsl(210 80% 68% / 0.05),
-      0 10px 20px -2px hsl(210 80% 68% / 0.08),
-      0 0 0 1px hsl(210 80% 68% / 0.03);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  .glass {
+    @apply bg-card/70 backdrop-blur-xl border border-border/50 shadow-lg;
   }
-  
-  .morning-card:hover {
-    box-shadow: 
-      0 8px 12px -1px hsl(210 80% 68% / 0.08),
-      0 20px 40px -4px hsl(210 80% 68% / 0.12),
-      0 0 0 1px hsl(210 80% 68% / 0.05);
-    transform: translateY(-2px);
+  .glass-strong {
+    @apply bg-card/85 backdrop-blur-2xl border border-border/60 shadow-xl;
   }
-
-  /* Primary Action Button - Playful & Bouncy */
-  .morning-button {
-    @apply inline-flex items-center justify-center gap-2;
-    @apply px-8 py-4 rounded-full;
-    @apply bg-gradient-to-r from-sky-400 to-indigo-400;
-    @apply text-white font-semibold text-sm;
-    @apply shadow-lg shadow-sky-200/50;
-    @apply transition-all duration-300;
-    @apply hover:-translate-y-1;
-    @apply hover:shadow-xl hover:shadow-sky-300/60;
-    @apply active:scale-95;
-    @apply disabled:opacity-50 disabled:hover:translate-y-0 disabled:cursor-not-allowed;
+  .glow-border {
+    box-shadow: 0 0 20px -5px hsl(var(--primary) / 0.3),
+                0 0 40px -10px hsl(var(--primary) / 0.15);
   }
-
-  /* Secondary Button */
-  .morning-button-secondary {
-    @apply inline-flex items-center justify-center gap-2;
-    @apply px-6 py-3 rounded-full;
-    @apply bg-white/60 backdrop-blur-sm;
-    @apply text-slate-600 font-medium text-sm;
-    @apply border border-white/50;
-    @apply shadow-sm shadow-slate-200/30;
-    @apply transition-all duration-300;
-    @apply hover:-translate-y-0.5 hover:bg-white/80;
-    @apply hover:shadow-md;
-    @apply active:scale-95;
+  .glow-border-focus {
+    box-shadow: 0 0 30px -5px hsl(var(--primary) / 0.5),
+                0 0 60px -10px hsl(var(--primary) / 0.25);
   }
-
-  /* Main Layout Background */
-  .morning-bg {
-    background: linear-gradient(135deg, 
-      hsl(350 100% 98%) 0%, 
-      hsl(330 100% 97%) 15%,
-      hsl(210 100% 97%) 50%, 
-      hsl(180 60% 96%) 85%,
-      hsl(160 50% 97%) 100%
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      hsl(var(--primary) / 0.1) 0%,
+      hsl(var(--primary) / 0.3) 50%,
+      hsl(var(--primary) / 0.1) 100%
     );
-    min-height: 100vh;
-    background-attachment: fixed;
+    background-size: 200% 100%;
+    animation: shimmer 2s ease-in-out infinite;
   }
-
-  /* Glow Effects */
-  .morning-glow {
-    box-shadow: 
-      0 0 40px -10px hsl(210 80% 68% / 0.2),
-      0 0 80px -20px hsl(260 60% 75% / 0.15);
-  }
-  
-  .morning-glow-focus {
-    box-shadow: 
-      0 0 60px -10px hsl(210 80% 68% / 0.3),
-      0 0 100px -20px hsl(260 60% 75% / 0.2),
-      0 0 0 3px hsl(210 80% 68% / 0.1);
-  }
-
-  /* Typography */
-  .morning-heading {
-    @apply text-slate-700 font-semibold tracking-wide leading-tight;
-  }
-  
-  .morning-text {
-    @apply text-slate-600 leading-relaxed;
-  }
-
-  /* Input Styling */
-  .morning-input {
-    @apply w-full bg-white/60 backdrop-blur-sm rounded-2xl;
-    @apply px-5 py-4 text-sm text-slate-700;
-    @apply border border-sky-100/50;
-    @apply placeholder:text-slate-400;
-    @apply focus:outline-none focus:ring-2 focus:ring-sky-300/50;
-    @apply transition-all duration-300;
-  }
-  
-  .morning-input:focus {
-    box-shadow: 0 0 30px -5px hsl(210 80% 68% / 0.15);
-    @apply bg-white/80;
+  .dream-card {
+    @apply glass rounded-3xl p-5 transition-all duration-300;
   }
 }
 
 @layer utilities {
-  /* Soft Shadow Utilities */
-  .shadow-morning {
-    box-shadow: 
-      0 4px 6px -1px hsl(210 80% 68% / 0.05),
-      0 10px 20px -2px hsl(210 80% 68% / 0.08);
+  .shadow-soft {
+    box-shadow: 0 4px 30px -10px hsl(var(--foreground) / 0.08);
   }
-  
-  .shadow-morning-lg {
-    box-shadow: 
-      0 8px 12px -1px hsl(210 80% 68% / 0.08),
-      0 20px 40px -4px hsl(210 80% 68% / 0.12);
-  }
-
-  /* Animation Utilities */
-  .animate-float {
-    animation: gentle-float 6s ease-in-out infinite;
-  }
-  
-  .animate-pulse-soft {
-    animation: pulse-soft 4s ease-in-out infinite;
+  .shadow-dreamy {
+    box-shadow: 0 8px 40px -12px hsl(var(--primary) / 0.15),
+                0 4px 20px -8px hsl(var(--foreground) / 0.05);
   }
 }
 
-/* Keyframes */
-@keyframes gentle-float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }
 
-@keyframes pulse-soft {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px -5px hsl(var(--primary) / 0.3); }
+  50% { box-shadow: 0 0 40px -5px hsl(var(--primary) / 0.6); }
 }
